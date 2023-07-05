@@ -1,0 +1,216 @@
+:root {
+    --back-color: #38404b;
+    --text-color: #94ADCF;;
+}
+* {
+    border: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    background-color: var(--back-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 74px;
+    /* min-height: 99vh; */
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 737px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 97vw;
+    }
+}
+
+/* Large */
+@media (min-width:1200px) {
+    .container {
+        width:1170px;
+    }
+}
+
+/* start components */
+.box {
+    border-radius: 20px;
+    background: var(--back-color);
+    padding: 25px 42px;
+    margin: 0 auto 0 auto;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+}
+@media (max-width: 767px) {
+    .box {
+        padding: 12px 5px;
+        font-size: 16px;
+    }
+}
+/* end components */
+
+/* Start Header */
+.add {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.add .box {
+    font-style: normal;
+    box-shadow: 4px 4px 10px 0px rgba(46, 53, 62, 0.90) inset, -3px -3px 6px 0px rgba(66, 75, 88, 0.90) inset, 3px -3px 6px 0px rgba(46, 53, 62, 0.20) inset, -3px 3px 6px 0px rgba(46, 53, 62, 0.20) inset, -1px -1px 2px 0px rgba(46, 53, 62, 0.50), 1px 1px 2px 0px rgba(66, 75, 88, 0.30);
+    width: 55%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.add .box h2 {
+    position: absolute;
+    display: none;
+    left: 1vw;
+}
+@media (max-width: 767px) {
+    .add .box h2 {
+        display: block;
+    }
+}
+.add .box input {
+    padding: 25px 0 25px 42px;
+    background-color: transparent;
+    width: 100%;
+    color: #94ADCF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+}
+@media (max-width: 767px) {
+    .add .box input {
+        display: none;
+    }
+}
+.add input::placeholder {
+    color: rgba(148, 173, 207, 0.70);
+}
+.add .box svg {
+    display: block;
+    margin-right: 15px;
+    scale: 1.2;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .add .box > svg {
+        display: none;
+        scale: .9;
+    }
+}
+.menu {
+    position: absolute;
+    right: 0;
+}
+.menu svg {
+    padding: 0;
+}
+@media (max-width: 767px) {
+    .add .menu svg {
+        scale: 1;
+        margin-right: 0;
+    }
+}
+/* End Header */
+/* Start Tasks */
+.tasks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 100px;
+}
+@media (max-width: 767px) {
+    .tasks {
+        grid-template-columns: 1fr;
+        padding-top: 74px;
+    }
+}
+.task {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 75%;
+    background: #38404B;
+    box-shadow: 5px 5px 13px 0px rgba(48, 54, 64, 0.90), -5px -5px 10px 0px rgba(64, 74, 86, 0.90), 5px -5px 10px 0px rgba(48, 54, 64, 0.20), -5px 5px 10px 0px rgba(48, 54, 64, 0.20), -1px -1px 2px 0px rgba(48, 54, 64, 0.50) inset, 1px 1px 2px 0px rgba(64, 74, 86, 0.30) inset;
+    margin: 0;
+    margin-bottom: 60px;
+    padding-left: 29px;
+}
+@media (max-width: 767px) {
+    .task {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        padding-left: 14px;
+        width: 95%;
+        border-radius: 12px;
+    }
+}
+.tasks .task svg {
+    scale: 1.1;
+}
+@media (max-width: 767px) {
+    .tasks .task svg {
+        scale: .7;
+    }
+}
+.tasks .task p {
+    padding-left: 30px;
+    color: var(--text-color);
+}
+@media (max-width: 767px) {
+    .tasks .task p {
+        padding-left: 17px;
+    }
+}
+.container h3 {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 37px;
+}
+@media (max-width: 767px) {
+    .container h3 {
+        font-size: 20px;
+        margin: 20px 0 15px;
+    }
+}
+.comp {
+    padding-top: 60px;
+}
+@media (max-width: 767px) {
+    .comp {
+        padding-top: 20px;
+    }
+}
+.comp .task {
+    box-shadow: 5px 5px 13px 0px rgba(48, 54, 64, 0.90) inset, -5px -5px 10px 0px rgba(64, 74, 86, 0.90) inset, 5px -5px 10px 0px rgba(48, 54, 64, 0.20) inset, -5px 5px 10px 0px rgba(48, 54, 64, 0.20) inset, -1px -1px 2px 0px rgba(48, 54, 64, 0.50), 1px 1px 2px 0px rgba(64, 74, 86, 0.30);
+}
+.comp .task p {
+    text-decoration-line: line-through;
+}
+.btn {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    color: var(--text-color);
+    font-size: 40px;
+}
+/* End Tasks */
