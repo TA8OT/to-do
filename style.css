@@ -63,6 +63,9 @@ body {
 }
 
 /* start components */
+.h33 {
+    margin-top: 76px;
+}
 .box {
     border-radius: 20px;
     background: var(--back-color);
@@ -154,7 +157,7 @@ body {
 .tasks {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 100px;
+    padding-top: 59px;
     column-gap: 45px;
     padding-left: 10px;
     padding-right: 10px;
@@ -177,6 +180,7 @@ body {
     margin: 0;
     margin-bottom: 60px;
     padding-left: 29px;
+    transition: .3s;
 }
 @media (max-width: 767px) {
     .task {
@@ -190,6 +194,7 @@ body {
 }
 .tasks .task svg {
     scale: 1.1;
+    cursor: pointer;
 }
 @media (max-width: 767px) {
     .tasks .task svg {
@@ -231,13 +236,14 @@ body {
 .comp .task p {
     text-decoration-line: line-through;
 }
-.btn svg{
+.btn svg {
     position: absolute;
     bottom: 60px;
     right: 40px;
     width: 60px;
     height: 60px;
     display: none;
+    cursor: pointer;
 }
 @media (max-width: 767px) {
     .btn svg {
