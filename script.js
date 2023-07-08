@@ -5,11 +5,17 @@ document.getElementById("addTask").onclick = function () {
     taskText = document.getElementById("task-txt").value;
     document.getElementById("task-txt").value = "";
     console.log(taskText);
-    
     if (taskText !== "") {
+        //creating an json obj
+        let obj = JSON.stringify({
+            text: taskText,
+            isComplete: false
+        });
+        console.log(obj);
         //adding data To localStorage
-        window.localStorage.setItem(localStorage.length,taskText);
-
+        window.localStorage
+        .setItem(localStorage.length,obj);
+        //element
         taskText = `
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="Ellipse 1" cx="9" cy="9" r="7.75" stroke="#94ADCF" stroke-width="2.5"/></svg>
                 <p>${taskText}</p>
@@ -34,7 +40,12 @@ window.onload = function() {
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="Ellipse 1" cx="9" cy="9" r="7.75" stroke="#94ADCF" stroke-width="2.5"/></svg>
         <p>${data}</p>`;
         newTask.id = i;
-        taskDiv.appendChild(newTask); 
+        taskDiv.appendChild(newTask);
     }
+    // for (let i = 0; i < localStorage.length; i++) {
+    //     setTimeout(function() {
+    //         document.getElementById(i).style.display = "flex";
+    //     }, 1000);
+    // }
 };
 
