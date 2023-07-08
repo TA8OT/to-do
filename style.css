@@ -62,6 +62,13 @@ body {
     }
 }
 
+/* very Large */
+@media (min-width:1400px) {
+    .container {
+        width:1370px;
+    }
+}
+
 /* start components */
 .h33 {
     margin-top: 76px;
@@ -168,6 +175,11 @@ body {
         padding-top: 74px;
         padding-left: 0;
         padding-right: 0;
+    }
+}
+@media (min-width:1400px) { 
+    .tasks { 
+        column-gap: 100px;
     }
 }
 .task {
